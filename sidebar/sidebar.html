@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/sidebar/sidebar.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ 
+</head>
+<body>
+    <div class="component-sidebar">
+        <div class="sidebar-iconbars">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <div class="sidebar-user">
+            <div class="sidebar-user-img">D</div>
+            <h3>Olá, Dami</h3>
+        </div>
+
+        <ul class="sidebar-ul">
+            <li class="sidebar-option active">
+                <i class="fa fa-home"></i>
+                <a href="#">Início</a>
+            </li>
+            <li class="sidebar-option">
+                <i class="fas fa-laptop"></i>
+                <a href="#">Equipamento</a>
+            </li>
+            <li class="sidebar-option">
+                <i class="fas fa-user-friends"></i>
+                <a href="#">Projetos</a>
+            </li>
+            <li class="sidebar-option">
+                <i class="fas fa-calendar-alt"></i>
+                <a href="#">Horários</a>
+            </li>
+            <li class="sidebar-option">
+                <i class="fas fa-cog"></i>
+                <a href="#">Configurações</a>
+            </li>
+            <li class="sidebar-option">
+                <i class="fas fa-clipboard-check"></i>
+                <a href="#">Solicitações</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.sidebar-ul .sidebar-option a').click(function(){
+                $('.sidebar-option').removeClass("active");
+                $(this).parent().addClass("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
+

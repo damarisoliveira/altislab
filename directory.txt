@@ -1,0 +1,28 @@
+project-x
+├── index.html
+├── assets
+│   ├── css
+│   │   └── style.css
+│   ├── js
+│   │   └── script.js
+│   └── images
+│       ├── project1.jpg
+│       ├── project2.jpg
+│       ├── project3.jpg
+│       ├── user1.jpg
+│       ├── user2.jpg
+│       └── user3.jpg
+├── navbar
+│   └── navbar.html
+├── bodies
+│   ├── home
+│   │   └── home.html
+│   ├── projects
+│   │   └── projects.html
+│   └── specific-project
+│       └── specific-project.html
+└── cards
+    ├── project-card
+    │   └── project-card.html
+    └── user-card
+        └── user-card.html
