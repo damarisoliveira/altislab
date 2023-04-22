@@ -30,6 +30,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 ul{
     list-style: none;
@@ -40,6 +41,7 @@ ul{
     padding: 15px;
     color: #FFFFFF;
     opacity: 1;
+    cursor: pointer;
 }
 .sidebar-option i{
     margin: 0px 10px;

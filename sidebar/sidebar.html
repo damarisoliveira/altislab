@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../css/sidebar/sidebar.css">
+
+    
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
- 
 </head>
 <body>
     <div class="component-sidebar">
@@ -18,41 +19,64 @@
         </div>
 
         <ul class="sidebar-ul">
-            <li class="sidebar-option active">
+            <li class="sidebar-option active" data-page="home">
                 <i class="fa fa-home"></i>
-                <a href="#">Início</a>
+                <a href="">Início</a>
             </li>
             <li class="sidebar-option">
                 <i class="fas fa-laptop"></i>
-                <a href="#">Equipamento</a>
+                <a href="#equipment">Equipamento</a>
             </li>
-            <li class="sidebar-option">
+            <li class="sidebar-option" data-page="projects">
                 <i class="fas fa-user-friends"></i>
                 <a href="#">Projetos</a>
             </li>
             <li class="sidebar-option">
                 <i class="fas fa-calendar-alt"></i>
-                <a href="#">Horários</a>
+                <a href="#Schedules">Horários</a>
             </li>
             <li class="sidebar-option">
                 <i class="fas fa-cog"></i>
-                <a href="#">Configurações</a>
+                <a href="#settings">Configurações</a>
             </li>
             <li class="sidebar-option">
                 <i class="fas fa-clipboard-check"></i>
-                <a href="#">Solicitações</a>
+                <a href="#requests">Solicitações</a>
             </li>
         </ul>
     </div>
     <script>
         $(document).ready(function () {
-            $('.sidebar-ul .sidebar-option a').click(function(){
+            $('.sidebar-ul .sidebar-option').click(function(){
                 $('.sidebar-option').removeClass("active");
-                $(this).parent().addClass("active");
+                $(this).addClass("active");
             });
+
+          
         });
+        function loadPage(pageId) {
+            // Atualiza o atributo 'data' do elemento do main correspondente
+            $('.main').each(function () {
+                if ($(this).attr('id') === pageId) {
+                    $(this).attr('data', 'bodies/' + pageId + '/' + pageId + '.html');
+                }
+            });
+            // Atualiza a classe 'active' do item do menu selecionado
+            $('.sidebar-option').removeClass('active');
+            $('.sidebar-option[data-page="' + pageId + '"]').addClass('active');
+        }
+
+        // Adiciona o evento de clique aos itens do menu
+        $('.sidebar-option').click(function () {
+            var pageId = $(this).attr('data-page');
+            loadPage(pageId);
+        });
+
+                    
+
+
     </script>
 </body>
 
 </html>
-
+ -->

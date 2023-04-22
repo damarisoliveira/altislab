@@ -4,25 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sidebar/">
-    
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/sidebar/sidebar.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    
     <title>ALTIS LAB</title>
 </head>
 <body>
-    <header>
-        <object class="sidebar" data="sidebar/sidebar.html" type="text/html"></object>
-	</header>
+    <header id="header-sidebar">
+        <div class="component-sidebar">
+            <div class="sidebar-iconbars">
+                <i class="fas fa-bars"></i>
+            </div>
+        
+            <div class="sidebar-user">
+                <div class="sidebar-user-img">D</div>
+                <h3>Olá, Dami</h3>
+            </div>
+    
+            <ul class="sidebar-ul">
+                <li class="sidebar-option active" data-page="home">
+                    <i class="fa fa-home"></i>
+                    <a href="">Início</a>
+                </li>
+                <li class="sidebar-option">
+                    <i class="fas fa-laptop"></i>
+                    <a href="#equipment">Equipamento</a>
+                </li>
+                <li class="sidebar-option" data-page="projects">
+                    <i class="fas fa-user-friends"></i>
+                    <a href="#">Projetos</a>
+                </li>
+                <li class="sidebar-option">
+                    <i class="fas fa-calendar-alt"></i>
+                    <a href="#Schedules">Horários</a>
+                </li>
+                <li class="sidebar-option">
+                    <i class="fas fa-cog"></i>
+                    <a href="#settings">Configurações</a>
+                </li>
+                <li class="sidebar-option">
+                    <i class="fas fa-clipboard-check"></i>
+                    <a href="#requests">Solicitações</a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
 	<main>
-		<object class="main" data="bodies/home/home.html" type="text/html"></object>
-	</main>
+        <object id="home" class="main" data="bodies/home/home.html" type="text/html"></object>
+        <object id="projects" class="main" data="bodies/projects/projects.html" type="text/html"></object>
+    </main>
 
-	
-    <script src="../javascript/sidebar.js"></script>
-    
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="javascript/home.js"></script>
 </body>
 </html>
