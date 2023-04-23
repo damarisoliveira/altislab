@@ -25,14 +25,13 @@
             <div class="accordion">
                 <input type="text" placeholder="Nome do projeto">
                 <input type="text" placeholder="Cliente">
-                <input type="datetime" placeholder="Data de início" id="dateinitial">
-                <i class="fas fa-calendar-alt"></i>
-                <input type="datetime" placeholder="Data de conclusão" id="datefinal">
-                <i class="fas fa-calendar-alt"></i>
+                <input type="date" name="date-input" value="Data de início" class="date-input"> 
+                <input type="date" name="date-input" value="Data de conclusão" class="date-input">  
                 <div>
                     <button id="button-clear">Limpar filtros</button>
                     <button id="button-filter">Buscar</button>
                 </div>
+                <!-- <input type="date" id="date-input" name="date-input" class="date-input">            -->
             </div>
         </div>
 
@@ -274,8 +273,12 @@
 
         </div>
         <div class="pagination-projects"></div>
+
     </main>
 
+ 
+    
+    
     <script src="../../javascript/javascript.js"></script>
     <script src="../../javascript/projects.js"></script>
 </body>

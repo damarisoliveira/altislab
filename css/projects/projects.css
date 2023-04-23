@@ -188,6 +188,7 @@ body{
 }
 
 
+/*
 #dateinitial{
     position: relative;
     padding-right: 30px; 
@@ -211,4 +212,30 @@ body{
     transform: translateX(-150%);
     font-size: 16px;
     color: #494948;
+}*/
+
+.date-input {
+    position: relative;
+  }
+  
+.date-input:before {
+    content: "\f073"; /* código do ícone "fa-calendar-alt" */
+    font-family: "Font Awesome 5 Free"; /* fonte do ícone */
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 0 5px;
+    pointer-events: none;
 }
+
+.date-input::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
