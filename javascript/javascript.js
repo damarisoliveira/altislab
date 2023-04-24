@@ -1,7 +1,7 @@
 $(document).ready(function() {
     paginate('.pagination', '.last-requests-card li', 3);
-    paginate('.pagination-collaborators', '.new-collaborators-table tbody tr', 4);
-    paginate('.pagination-projects', '#container .project', 9);
+    paginate('.pagination-collaborators', '.new-collaborators table tbody tr', 4);
+    
 
     $('.last-requests-card li').each(function(index, element) {
         var status = $(element).find('.card-info-status').text();
@@ -17,6 +17,62 @@ $(document).ready(function() {
 
         }
        
+    });
+
+    if($(window).width() <= 768) {
+        $("#sidebar").animate({width: "60px"});
+        $("main").animate({width: '100%', marginLeft: '60px'});
+        $(".sidebar-option").each(function() {
+            $(".sidebar-option small").hide();
+        });
+        $(".sidebar-user").hide();
+        $("#sidebar-ul").css({
+            padding: '70px 0 0 0',
+        });        
+    }
+
+    $(".sidebar-iconbars").click(function() {
+       
+        if($("#sidebar").width() == 300) {
+            $("#sidebar").animate({width: "60px"});
+            $("main").animate({width: '100%', marginLeft: '60px'});
+            $(".sidebar-option").each(function() {
+                $(".sidebar-option small").hide();
+            });
+            $(".sidebar-user").hide();
+            $("#sidebar-ul").css({
+                padding: '70px 0 0 0',
+            });
+        }
+        else{
+            
+            if ($(window).width() < 768) {
+                $("#sidebar").css({
+                    zIndex: '1',
+                });
+            }
+            else{
+                $("main").animate({width: 'calc(100% - 300px)', marginLeft: '300px'});
+                $("#sidebar-ul").css({
+                    padding: '25px 0',
+                });
+            }
+            $("#sidebar").animate({width: "300px"});
+            $(".sidebar-option small").show();
+            $(".sidebar-user").show();
+
+            
+            
+        }
+        
+    });
+
+
+    $(".card-info h4").hover(function() {
+        var time = $(this).attr("data-time");
+        $(this).append('<span class="badge">' + time + '</span>');
+    }, function() {
+        $(this).find('.badge').remove();
     });
 
 });

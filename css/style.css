@@ -1,3 +1,13 @@
+:root {
+    ---neutral-color-dark-05: #888888;
+    ---neutral-color-light-01: #AFAFAF;
+    ---neutral-color-light-02: #C6C6C6;
+    ---status-color-critical-dark: #88000D;
+    ---status-color-critical-base: #CC1414;
+    ---status-color-ok-dark: #0E800D;
+    ---neutral-color-dark-04: #5D5D5D;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -5,9 +15,12 @@
 }
 body{
     display: flex;
-    overflow: hidden;
+    overflow-y: hidden;
 }
-header{
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
     margin: 0px;
     width: 300px;
     height: 100vh;
@@ -15,8 +28,90 @@ header{
     box-shadow: 0px 3px 6px #00000029;
     opacity: 1;
 }
-main, .main{
+main{
+    margin-left: 300px;
     width: 100%;
     height: 100vh;
+    overflow-y: scroll;
+}
+.main-full-width {
+    width: calc(100% - 300px);
+}
+.main-collapsed-width {
+    width: 100%;
+  }
+  .nav-upper{
+    width: 100%;
+    height: 70px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000008;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-upper-logo{
+    width: 100px;
+    height: 100%;
+    margin-left: 20px;
+}
+.nav-upper-logo img{
+    padding: 5px;
+    width: 180px;
+    height: 60px;
+}
+.nav-upper-user{
+    width: 40px;
+    height: 40px;
+    margin: 0px 20px;
+    border-radius: 50%;
+    background: #BEDCBC 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #045C2F;
 }
 
+  
+/*reponsividade*/
+
+@media (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .badge {
+        position: absolute;
+        z-index: 999;
+        padding: 5px;
+        border: 0.25px solid #cccccc;
+        border-radius: 5px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    
+      
+
+}
+  
+@media (max-width: 1000px){
+    #sidebar{
+        width: 60px;
+        z-index: 1;
+    }
+    .sidebar-option small, .sidebar-user{
+        display: none;
+    }
+    #sidebar-ul{
+        padding: 70px 0 0 0;
+    }
+    main{
+        width: calc(100%);
+        margin-left: 60px;
+    }
+    
+}

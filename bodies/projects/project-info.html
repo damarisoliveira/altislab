@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALTIS LAB</title>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../../css/projects/projects.css">
     <link rel="stylesheet" href="../../css/sidebar/sidebar.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/projects/project-info.css">
+    
 </head>
 <body>
     <header id="sidebar">
@@ -33,7 +34,7 @@
                     <i class="fas fa-laptop"></i>
                     <small>Equipamento</small> 
                 </a>
-                <a class="sidebar-option active" href="projects.html">
+                <a class="sidebar-option active"  href="projects.html">
                     <i class="fas fa-user-friends"></i>
                     <small>Projetos</small>
                 </a>
@@ -50,11 +51,12 @@
                     <small>Solicitações</small>
                 </a>
             </div>
-          
+            
         </div>
     </header>
 
     <main>
+
         <nav class="nav-upper">
             <div class="nav-upper-logo">
                 <img src="../../img/altislab.png" alt="">
@@ -65,34 +67,29 @@
         </nav>
     
         <section class="main-projects">
-            <h2>Projetos</h2>
-            <small class="link"><a href="../../index.html">Início </a><strong> / Projetos</strong></small>
+            <h2>Projeto 1</h2>
+            <small class="link"><a href="../../index.html">Início</a> / <a href="../../bodies/projects/projects.html">Projetos</a> / <strong>Projeto 1</strong></small>
     
-            <div id="filter">
-                <p>Filtrar por</p>
-                <div class="accordion">
-                    <input type="text" placeholder="Nome do projeto">
-                    <select >
-                        <option value="">Cliente</option>
-                        <option value="1">Cliente 01</option>
-                        <option value="2">Cliente 02</option>
-                    </select>
-                    <input type="txt" name="date-input" placeholder="Data de início" class="date-input"> 
-                    <input type="text" name="date-input" placeholder="Data de conclusão" class="date-input">
-            
-                    <div>
-                        <button id="button-clear">Limpar filtros</button>
-                        <button id="button-filter">Buscar</button>
-                    </div>
+            <div class="info">
+                <h4>Detalhes do projeto</h4>
+
+                <div id="info-items">
+                    <small>Cliente: Cliente 1</small>
+                    <small>Data de início: 12/11/2021</small>
+                    <small>Data de conclusão prevista: 12/11/2023</small>
                 </div>
             </div>
     
+            <div class="info">
+                <h4>Colaboradores</h4>
+            </div>
             <div class="container"></div>
-            <div class="pagination-projects"></div>
+            <div class="pagination-collaborator"></div>
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="../../javascript/projects.js"></script>
+    <script src="../../javascript/project-info.js"></script>
     <script src="../../javascript/javascript.js"></script>
+    
 </body>
 </html>

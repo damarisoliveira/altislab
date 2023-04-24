@@ -1,0 +1,96 @@
+.info{
+    margin: 10px 5px;
+    color: #4E4E4E;
+    
+}
+.info h4{
+    padding-bottom: 12px;
+    border-bottom: 0.25px solid #707070;
+    opacity: 1;
+}
+#info-items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#info-items small{
+    padding: 8px 10% 8px 0px;
+    font-size: 12px;
+}
+
+.link a{
+    text-decoration: none;
+    color: #4E4E4E;
+    font-size: 15px;
+    margin: 0;
+    padding: 2;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+.collaborator{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+    padding:  20px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    width: 250px;  
+}
+.collaborator-img{
+    background: #EEEEEE 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+    border-radius: 50%;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 15px 0px 5px;
+}
+.collaborator-img i{
+    font-size: 40px;
+    height: 70px;
+    color: #5D5D5D;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+}
+.collaborator-info{
+    display: flex;
+    flex-direction: column;
+    color: #4E4E4E;
+}
+.collaborator-info h3{
+    font-size: 14px;
+    padding: 0 0 7px 0;
+}
+.collaborator-info small{
+    font-size: 12px;
+}
+
+
+
+/* paginacao */
+.pagination-collaborator{
+    text-align: end;
+    padding: 10px 0;
+}
+.pagination-collaborator a{
+   
+    margin: 2px;
+    padding: 2px 8px;
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid #707070;
+    font: normal normal normal 14px/19px Segoe UI;
+}
+.pagination-collaborator a.active{
+    background-color: #E2E2E2;
+}
