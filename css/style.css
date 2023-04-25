@@ -2,16 +2,12 @@
     ---neutral-color-dark-05: #888888;
     ---neutral-color-light-01: #AFAFAF;
     ---neutral-color-light-02: #C6C6C6;
-    ---status-color-critical-dark: #88000D;
-    ---status-color-critical-base: #CC1414;
-    ---status-color-ok-dark: #0E800D;
     ---neutral-color-dark-04: #5D5D5D;
 }
 
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
 }
 body{
     display: flex;
@@ -101,7 +97,7 @@ main{
 @media (max-width: 1000px){
     #sidebar{
         width: 60px;
-        z-index: 1;
+        position: absolute;
     }
     .sidebar-option small, .sidebar-user{
         display: none;
@@ -110,8 +106,13 @@ main{
         padding: 70px 0 0 0;
     }
     main{
-        width: calc(100%);
+        width: 100%;
         margin-left: 60px;
+        position: relative;
     }
+
+    
     
 }
+
+ 

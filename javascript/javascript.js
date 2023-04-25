@@ -19,58 +19,47 @@ $(document).ready(function() {
        
     });
 
-    if($(window).width() <= 768) {
-        $("#sidebar").animate({width: "60px"});
-        $("main").animate({width: '100%', marginLeft: '60px'});
-        $(".sidebar-option").each(function() {
-            $(".sidebar-option small").hide();
-        });
-        $(".sidebar-user").hide();
-        $("#sidebar-ul").css({
-            padding: '70px 0 0 0',
-        });        
-    }
+    const sidebar = $("#sidebar");
+    const main = $("main");
+    const sidebarOptions = $(".sidebar-option");
+    const sidebarUser = $(".sidebar-user");
+    const sidebarUl = $("#sidebar-ul");
+
 
     $(".sidebar-iconbars").click(function() {
-       
-        if($("#sidebar").width() == 300) {
-            $("#sidebar").animate({width: "60px"});
-            $("main").animate({width: '100%', marginLeft: '60px'});
-            $(".sidebar-option").each(function() {
-                $(".sidebar-option small").hide();
+        if (sidebar.width() == 300) {
+            // recolhe a barra lateral
+            sidebar.animate({width: "60px"});
+            main.animate({width: '100%', marginLeft: '60px'});
+            sidebarOptions.each(function() {
+                $(this).find("small").hide();
             });
-            $(".sidebar-user").hide();
-            $("#sidebar-ul").css({
-                padding: '70px 0 0 0',
-            });
-        }
-        else{
-            
-            if ($(window).width() < 768) {
-                $("#sidebar").css({
-                    zIndex: '1',
-                });
+            sidebarUser.hide();
+            sidebarUl.css({ padding: '70px 0 0 0' });
+        } else {
+            // expande a barra lateral
+            if ($(window).width() < 1000) {
+                sidebar.css({ zIndex: '1' });
+            } else {
+                main.animate({width: 'calc(100% - 300px)', marginLeft: '300px'});
+                sidebarUl.css({ padding: '25px 0' });
             }
-            else{
-                $("main").animate({width: 'calc(100% - 300px)', marginLeft: '300px'});
-                $("#sidebar-ul").css({
-                    padding: '25px 0',
-                });
-            }
-            $("#sidebar").animate({width: "300px"});
-            $(".sidebar-option small").show();
-            $(".sidebar-user").show();
-
-            
-            
+            sidebarOptions.css({ display: 'flex' });
+            sidebarUser.css({ display: 'flex', justifyContent: 'center' });
+            sidebar.animate({width: "300px"});
+            sidebarOptions.find("small").show();
+            sidebarUser.show();
         }
-        
     });
 
 
+    
+
     $(".card-info h4").hover(function() {
-        var time = $(this).attr("data-time");
-        $(this).append('<span class="badge">' + time + '</span>');
+        if($(window).width() < 768){
+            var time = $(this).attr("data-time");
+            $(this).append('<span class="badge">' + time + '</span>');
+        }
     }, function() {
         $(this).find('.badge').remove();
     });
